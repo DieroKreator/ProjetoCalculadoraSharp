@@ -1,0 +1,6 @@
+/Users/dierokreator/Programming/Interasys/ProjetoCalculadoraSharp/Calculadora139Sharp.Tests/obj/Debug/net8.0/Calculadora139Sharp.Tests.csproj.AssemblyReference.cache
+/Users/dierokreator/Programming/Interasys/ProjetoCalculadoraSharp/Calculadora139Sharp.Tests/obj/Debug/net8.0/Calculadora139Sharp.Tests.GeneratedMSBuildEditorConfig.editorconfig
+/Users/dierokreator/Programming/Interasys/ProjetoCalculadoraSharp/Calculadora139Sharp.Tests/obj/Debug/net8.0/Calculadora139Sharp.Tests.AssemblyInfoInputs.cache
+/Users/dierokreator/Programming/Interasys/ProjetoCalculadoraSharp/Calculadora139Sharp.Tests/obj/Debug/net8.0/Calculadora139Sharp.Tests.AssemblyInfo.cs
+/Users/dierokreator/Programming/Interasys/ProjetoCalculadoraSharp/Calculadora139Sharp.Tests/obj/Debug/net8.0/Calculadora139Sharp.Tests.csproj.CoreCompileInputs.cache
+/Users/dierokreator/Programming/Interasys/ProjetoCalculadoraSharp/Calculadora139Sharp.Tests/bin/Debug/net8.0/CoverletSourceRootsMapping_Calculadora139Sharp.Tests
