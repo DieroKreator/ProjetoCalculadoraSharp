@@ -27,7 +27,16 @@ public class Calculadora
 
     public static int DividirDoisNumeros(int num1, int num2)
     {
-        return num1 / num2;
+        try
+        {
+            return num1 / num2;
+        }
+        catch (System.DivideByZeroException)
+        {
+            
+            Console.WriteLine("Não é possível dividir por zero");
+            return 0;
+        }
     }
 
     public static void Main() 

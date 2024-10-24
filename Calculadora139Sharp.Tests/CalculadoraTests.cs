@@ -64,4 +64,17 @@ public class Tests
 
         Assert.That(resultadoEsperado, Is.EqualTo(resultadoAtual));
     }
+
+    [Test]
+    public void testDividirPorZero()
+    {
+        int num1 = 20;
+        int num2 = 0;
+
+        int resultadoEsperado = 0;
+
+        int resultadoAtual = Calculadora.DividirDoisNumeros(num1, num2);
+
+        Assert.That(resultadoEsperado, Is.EqualTo(resultadoAtual));
+    }
 }
