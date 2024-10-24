@@ -22,7 +22,7 @@ public class Tests
 
         int resultadoEsperado =50;
 
-        int resultadoAtual = _calculadora.SomarDoisNumero(num1, num2);
+        int resultadoAtual = Calculadora.SomarDoisNumero(num1, num2);
 
         Assert.That(resultadoEsperado, Is.EqualTo(resultadoAtual));
     }
