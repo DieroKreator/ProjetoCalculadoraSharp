@@ -16,3 +16,5 @@ packages/
 # Ignore logs, lock files, and temporary files
 *.log
 *.cache
+*.dll
+*.pdb
