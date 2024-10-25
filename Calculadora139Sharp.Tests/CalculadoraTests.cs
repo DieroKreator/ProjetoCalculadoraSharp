@@ -78,9 +78,9 @@ public class Tests
         Assert.That(resultadoEsperado, Is.EqualTo(resultadoAtual));
     }
 
-    [TestCase(5,8,13)]
-    [TestCase(0,8,8)]
-    [TestCase(5,-1,4)]
+    [TestCase(5, 8, 13)]
+    [TestCase(0, 8, 8)]
+    [TestCase(5, -1, 4)]
     public void testSomarDoisNumerosTC(int num1, int num2, int resultadoEsperado)
     {
         int resultadoAtual = Calculadora.SomarDoisNumero(num1, num2);
@@ -88,11 +88,22 @@ public class Tests
         Assert.That(resultadoAtual, Is.EqualTo(resultadoEsperado));
     }
 
-    [TestCase(5,8,13)]
-    [TestCase(7,8,15)]
-    [TestCase(3,3,6)]
+    [TestCase(1, 10, 11)]
+    [TestCase(0, 8, 8)]
+    [TestCase(5, -1, 4)]
     public void testSomarDoisNumerosTC2(int num1, int num2, int resultadoEsperado)
     {
         Assert.That(Calculadora.SomarDoisNumero(num1, num2), Is.EqualTo(resultadoEsperado));
+    }
+
+    // Teste Data Driven
+    [TestCase(1, 10, 11)]
+    [TestCase(0, 8, 8)]
+    [TestCase(5, -1, 4)]
+    public void testSomarDoisNumerosTC2(int num1, int num2, int resultadoEsperado)
+    {
+        int resultadoAtual = Calculadora.SomarDoisNumero(num1, num2);
+
+        Assert.That(resultadoAtual, Is.EqualTo(resultadoEsperado));
     }
 }
