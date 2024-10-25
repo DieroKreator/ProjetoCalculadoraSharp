@@ -1,5 +1,5 @@
 // 1 - Namespace = Conjunto de Classe
-namespace Calc;
+namespace Calculadora139Sharp;
 
 // 2 - Bibliotecas
 

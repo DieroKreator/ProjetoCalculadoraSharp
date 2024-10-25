@@ -1,8 +1,8 @@
 using NUnit.Framework;
-using Calc;
 
 namespace Calculadora139Sharp.Tests;
 
+[TestFixture] // Marcação de que a classe trabalha com testes parametrizados
 public class Tests
 {
     [SetUp]
@@ -76,5 +76,19 @@ public class Tests
         int resultadoAtual = Calculadora.DividirDoisNumeros(num1, num2);
 
         Assert.That(resultadoEsperado, Is.EqualTo(resultadoAtual));
+    }
+
+    [TestCase(5,8,13)]
+    public void testSomarDoisNumerosTC(int num1, int num2, int resultadoEsperado)
+    {
+        int resultadoAtual = Calculadora.SomarDoisNumero(num1, num2);
+
+        Assert.That(resultadoAtual, Is.EqualTo(resultadoEsperado));
+    }
+
+    [TestCase(5,8,13)]
+    public void testSomarDoisNumerosTC2(int num1, int num2, int resultadoEsperado)
+    {
+        Assert.That(Calculadora.SomarDoisNumero(num1, num2), Is.EqualTo(resultadoEsperado));
     }
 }
