@@ -5,10 +5,44 @@ namespace Calculadora139Sharp.Tests;
 [TestFixture] // Marcação de que a classe trabalha com testes parametrizados
 public class Tests
 {
-    [SetUp]
-    public void Setup()
+    // funcão de leitura de dados a partir de um arquivo csv
+    public static IEnumerable<TestCaseData> lerDadosDeTeste(string operacao)
     {
+        string caminhoMassa = "/Users/dierokreator/Programming/Interasys/ProjetoCalculadoraSharp/Calculadora139Sharp.Tests/fixture/";   // Caminho do arquivo csv
 
+        switch (operacao)
+        {
+            case "+":
+                caminhoMassa += "massaSomar.csv";
+                break;
+            case "-":
+                caminhoMassa += "massaSubtrair.csv";
+                break;
+            case "*":
+                caminhoMassa += "massaMultiplicar.csv";
+                break;
+            case "/":
+                caminhoMassa += "massaDividir.csv";
+                break;
+        }
+
+        using (var leitor = new StreamReader(caminhoMassa))
+        {
+            // pular a primera linha - cabeçalho
+            leitor.ReadLine();
+
+            while (!leitor.EndOfStream)
+            {
+                var linha = leitor.ReadLine();  // lendo uma linha
+                var valores = linha.Split(",")  // dividir em campos
+
+                yield return TestCaseData(int.Parse(valores[0]),
+                                          int.Parse(valores[1]),
+                                          int.Parse(valores[2])
+                );  
+            }
+        }
+        
     }
 
     [Test]
@@ -97,10 +131,7 @@ public class Tests
     }
 
     // Teste Data Driven
-    [TestCase(1, 10, 11)]
-    [TestCase(0, 8, 8)]
-    [TestCase(5, -1, 4)]
-    public void testSomarDoisNumerosTC2(int num1, int num2, int resultadoEsperado)
+    public void testSomarDoisNumerosDD(int num1, int num2, int resultadoEsperado)
     {
         int resultadoAtual = Calculadora.SomarDoisNumero(num1, num2);
 
