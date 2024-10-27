@@ -34,15 +34,20 @@ public class Tests
             while (!leitor.EndOfStream)
             {
                 var linha = leitor.ReadLine();  // lendo uma linha
-                var valores = linha.Split(",")  // dividir em campos
 
-                yield return TestCaseData(int.Parse(valores[0]),
-                                          int.Parse(valores[1]),
-                                          int.Parse(valores[2])
-                );  
+                if (linha != null)
+                {
+                    var valores = linha.Split(",");  // dividir em campos
+
+                    yield return new TestCaseData(int.Parse(valores[0]),
+                                                  int.Parse(valores[1]),
+                                                  int.Parse(valores[2])
+                    );  
+                }
+                
             }
         }
-        
+
     }
 
     [Test]
@@ -131,6 +136,7 @@ public class Tests
     }
 
     // Teste Data Driven
+    [Test, TestCaseSource(nameof(lerDadosDeTeste), new object[] { "+" })]
     public void testSomarDoisNumerosDD(int num1, int num2, int resultadoEsperado)
     {
         int resultadoAtual = Calculadora.SomarDoisNumero(num1, num2);
